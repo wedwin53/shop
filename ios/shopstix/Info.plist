@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>shopstix</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Zetafonts - Aristotelica Display Bold.ttf</string>
+		<string>Zetafonts - Aristotelica Display Demibold.ttf</string>
+		<string>Zetafonts - Aristotelica Display Extralight.ttf</string>
+		<string>Zetafonts - Aristotelica Display Fat.ttf</string>
+		<string>Zetafonts - Aristotelica Display Hairline.ttf</string>
+		<string>Zetafonts - Aristotelica Display Light.ttf</string>
+		<string>Zetafonts - Aristotelica Display Regular.ttf</string>
+		<string>Zetafonts - Aristotelica Display Thin.ttf</string>
+		<string>Zetafonts - Aristotelica Icons Bold.ttf</string>
+		<string>Zetafonts - Aristotelica Icons DemiBold.ttf</string>
+		<string>Zetafonts - Aristotelica Icons ExtraLight.ttf</string>
+		<string>Zetafonts - Aristotelica Icons Hairline.ttf</string>
+		<string>Zetafonts - Aristotelica Icons Light.ttf</string>
+		<string>Zetafonts - Aristotelica Icons Regular.ttf</string>
+		<string>Zetafonts - Aristotelica Icons Thin.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps Bold.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps DemBd.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps ExtLt.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps Hairlin.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps Light.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps Regular.ttf</string>
+		<string>Zetafonts - Aristotelica Small Caps Thin.ttf</string>
+		<string>Zetafonts - Aristotelica Text Bold.ttf</string>
+		<string>Zetafonts - Aristotelica Text DemiBold.ttf</string>
+		<string>Zetafonts - Aristotelica Text ExtraLight.ttf</string>
+		<string>Zetafonts - Aristotelica Text Hairline.ttf</string>
+		<string>Zetafonts - Aristotelica Text Light.ttf</string>
+		<string>Zetafonts - Aristotelica Text Regular.ttf</string>
+		<string>Zetafonts - Aristotelica Text Thin.ttf</string>
+		<string>ZetafontsB.ttf</string>
+		<string>aristotelica.ttf</string>
+		<string>Merienda-Bold.ttf</string>
+		<string>Merienda-Regular.ttf</string>
+	</array>
+</dict>
+</plist>
