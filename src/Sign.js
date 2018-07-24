@@ -7,6 +7,7 @@ import {
     View,
     TouchableHighlight
   } from 'react-native';
+import { Actions } from 'react-native-router-flux'
 
 
 export default class SignView extends Component<Props> {
@@ -19,7 +20,7 @@ export default class SignView extends Component<Props> {
             <View style={styles.animatedV}>
               <Text style={styles.welcome}>Welcome back!!</Text>
             </View>
-            <View style={styles.animateB}>
+            <View style={styles.botoneraCont}>
                 <TouchableHighlight onPress={()=> console.warn("Create Botton")} style={styles.button}>
                   <Text style={styles.txtButton}>Create Account</Text>
                 </TouchableHighlight>
@@ -62,42 +63,54 @@ const styles = StyleSheet.create({
   },
   animatedV: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     marginBottom: 20
   },
-  animateB: {
+  botoneraCont: {
     flex: 1,
+    flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
+    paddingRight: 5,
   },
   button: {
-    width: 320,
+    width: '50%',
     height: 60,
     backgroundColor: "#743c3c",
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
-    marginBottom: 10,
+    marginRight: 2,
+    //marginTop: 20,
+    //marginBottom: 10,
   },
   txtButton: {
     fontFamily: 'aristotelica',
-    fontSize: 25,
+    fontSize: 22,
     color: 'white',
   },
   buttonForgot:{
-    width: 320,
+    width: '50%',
     height: 60,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "#c52323",
+    marginLeft: 2,    
   },
   singButtonContainer: {
-    flex: 2
+    flex: 2,
+    justifyContent: 'flex-start',
+    width: '100%',
+    alignItems: 'center',
   },
   singButton:{
-
+    width: '50%',
+    height: 60,
+    backgroundColor: "#743c3c",
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });

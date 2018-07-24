@@ -7,6 +7,7 @@ import {
     Animated,
     TouchableHighlight
   } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 
 export default class WelcomeView extends Component<Props> {
@@ -49,7 +50,7 @@ export default class WelcomeView extends Component<Props> {
                 <TouchableHighlight onPress={()=> console.warn("Botton Order")} style={styles.button}>
                   <Text style={styles.txtButton}>Start Order</Text>
                 </TouchableHighlight>
-                <TouchableHighlight onPress={()=> console.warn("Botton Sign")} style={styles.buttonSign}>
+                <TouchableHighlight onPress={()=> Actions.sign()} style={styles.buttonSign}>
                   <Text style={styles.txtButton}>Sign in</Text>
                 </TouchableHighlight>
             </Animated.View>
