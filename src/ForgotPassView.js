@@ -14,47 +14,39 @@ import { Actions } from 'react-native-router-flux'
 export default class SignView extends Component<Props> {
 
   state = {
-    text: '',
-    password: ''
+    email: '',
+    phone: '',
   }
 
   render() {
     return (
       <SafeAreaView style={styles.safeContainer}>
         <ImageBackground source={require('./images/background.png')} style={styles.container}>
-            <View style={styles.animatedV}>
-              <Text style={styles.welcome}>Welcome back!!</Text>
+            <View style={styles.tittleContainer}>
+              <Text style={styles.glad}>We'll send a password</Text>
+              <Text style={styles.glad}>reset link to the email or</Text>
             </View>
             <View style={styles.txtContainer}>
             <TextInput
               style={styles.txtInput}
               placeholder="E-mail:"
               placeholderTextColor="gray"
-              onChangeText={(text) => this.setState({text})}
-              value={this.state.text}
+              onChangeText={(email) => this.setState({email})}
+              value={this.state.email}
               maxLength={30}
             />
             <TextInput
               style={styles.txtInput}
-              placeholder="Password:"
+              placeholder="Phone Number:"
               placeholderTextColor="gray"
-              onChangeText={(password) => this.setState({password})}
-              value={this.state.password}
-              secureTextEntry={true}
+              onChangeText={(phone) => this.setState({phone})}
+              value={this.state.phone}
               maxLength={30}
             />
             </View>
-            <View style={styles.botoneraCont}>
-                <TouchableHighlight onPress={()=> Actions.createAccount()} style={styles.button}>
-                  <Text style={styles.txtButton}>Create Account</Text>
-                </TouchableHighlight>
-                <TouchableHighlight onPress={()=> console.warn("Forgot Password")} style={styles.buttonForgot}>
-                  <Text style={styles.txtButton}>Forgot Password</Text>
-                </TouchableHighlight>
-            </View>
-            <View style={styles.singButtonContainer}>
-                <TouchableHighlight onPress={()=> console.warn("Sign in")} style={styles.singButton}>
-                  <Text style={styles.txtButton}>Sign in</Text>
+            <View style={styles.buttonContainer}>
+                <TouchableHighlight onPress={()=> console.warn("Submit Button")} style={styles.buttonSubmit}>
+                  <Text style={styles.txtButton}>Submit</Text>
                 </TouchableHighlight>
             </View>
         </ImageBackground>
@@ -76,70 +68,49 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'transparent',
   },
-  welcome: {
-    fontSize: 25,
+  glad: {
+    fontSize: 22,
     fontFamily: 'aristotelica',
     color: 'white',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 5},
     textShadowRadius: 10,
-    textAlign: 'center'
+    textAlign: 'center',
   },
-  animatedV: {
-    flex: 1,
-    justifyContent: 'flex-end',
+  tittleContainer: {
+    flex: 0,
+    justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 100,
     marginBottom: 20
   },
-  botoneraCont: {
+  buttonContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingLeft: 10,
     paddingRight: 10,
-  },
-  button: {
-    width: '45%',
-    height: 55,
-    backgroundColor: "#c52323",
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 5,
   },
   txtButton: {
     fontFamily: 'aristotelica',
     fontSize: 20,
     color: 'white',
   },
-  buttonForgot:{
+  buttonSubmit:{
     width: '45%',
     height: 55,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "#7c6b6b",
-    marginLeft: 5,    
-  },
-  singButtonContainer: {
-    flex: 2,
-    justifyContent: 'flex-start',
-    width: '100%',
-    alignItems: 'center',
-  },
-  singButton:{
-    width: '45%',
-    height: 55,
-    backgroundColor: "#743c3c",
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#c52323",
+    marginTop: 10,
+    marginLeft: 2,    
   },
   txtContainer:{
-    flex: 1,
-    justifyContent:'center',
+    flex: 0,
+    justifyContent:'flex-start',
     alignItems: 'center',
     width: '100%'
   },
@@ -149,7 +120,7 @@ const styles = StyleSheet.create({
     color: 'white',
     backgroundColor: '#743c3c',
     borderRadius: 8,
-    width: '90%',
+    width: '85%',
     height: 50,
     borderColor: 'black',
     marginBottom: 5,

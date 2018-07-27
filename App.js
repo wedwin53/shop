@@ -4,6 +4,7 @@ import {
   } from 'react-native';
 import WelcomeView from './src/Welcome';
 import SignView from './src/Sign';
+import CreateAccountView from './src/CreateAccountView';
 import { Router, Scene } from 'react-native-router-flux';
 
 type Props = {};
@@ -11,7 +12,7 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <Router navigationBarStyle={styles.navBar}>
+      <Router>
         <Scene key="root">
           <Scene 
           key="welcome"
@@ -22,6 +23,12 @@ export default class App extends Component<Props> {
           <Scene 
           key="sign"
           component={SignView}
+          navTransparent
+          />
+          <Scene 
+          key="createAccount"
+          component={CreateAccountView}
+          navTransparent
           />
         </Scene>
       </Router>
