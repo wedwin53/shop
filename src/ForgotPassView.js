@@ -6,7 +6,8 @@ import {
     SafeAreaView,
     View,
     TouchableHighlight,
-    TextInput
+    TextInput,
+    Platform
   } from 'react-native';
 import { Actions } from 'react-native-router-flux'
 
@@ -25,6 +26,7 @@ export default class SignView extends Component<Props> {
             <View style={styles.tittleContainer}>
               <Text style={styles.glad}>We'll send a password</Text>
               <Text style={styles.glad}>reset link to the email or</Text>
+              <Text style={styles.glad}>phone provided</Text>
             </View>
             <View style={styles.txtContainer}>
             <TextInput
@@ -70,7 +72,10 @@ const styles = StyleSheet.create({
   },
   glad: {
     fontSize: 22,
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 5},
@@ -94,7 +99,10 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   txtButton: {
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     fontSize: 20,
     color: 'white',
   },
@@ -116,7 +124,10 @@ const styles = StyleSheet.create({
   },
   txtInput:{
     fontSize: 20,
-    fontFamily:'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     backgroundColor: '#743c3c',
     borderRadius: 8,

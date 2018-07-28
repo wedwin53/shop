@@ -6,7 +6,8 @@ import {
     SafeAreaView,
     View,
     TouchableHighlight,
-    TextInput
+    TextInput,
+    Platform
   } from 'react-native';
 import { Actions } from 'react-native-router-flux'
 
@@ -48,12 +49,12 @@ export default class SignView extends Component<Props> {
                 <TouchableHighlight onPress={()=> Actions.createAccount()} style={styles.button}>
                   <Text style={styles.txtButton}>Create Account</Text>
                 </TouchableHighlight>
-                <TouchableHighlight onPress={()=> console.warn("Forgot Password")} style={styles.buttonForgot}>
+                <TouchableHighlight onPress={()=> Actions.forgotPassword()} style={styles.buttonForgot}>
                   <Text style={styles.txtButton}>Forgot Password</Text>
                 </TouchableHighlight>
             </View>
             <View style={styles.singButtonContainer}>
-                <TouchableHighlight onPress={()=> console.warn("Sign in")} style={styles.singButton}>
+                <TouchableHighlight onPress={()=> alert("Sign in")} style={styles.singButton}>
                   <Text style={styles.txtButton}>Sign in</Text>
                 </TouchableHighlight>
             </View>
@@ -78,7 +79,10 @@ const styles = StyleSheet.create({
   },
   welcome: {
     fontSize: 25,
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 5},
@@ -110,7 +114,10 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   txtButton: {
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     fontSize: 20,
     color: 'white',
   },
@@ -145,7 +152,10 @@ const styles = StyleSheet.create({
   },
   txtInput:{
     fontSize: 20,
-    fontFamily:'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     backgroundColor: '#743c3c',
     borderRadius: 8,

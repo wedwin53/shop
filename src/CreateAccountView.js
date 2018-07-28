@@ -6,7 +6,8 @@ import {
     SafeAreaView,
     View,
     TouchableHighlight,
-    TextInput
+    TextInput,
+    Platform
   } from 'react-native';
 import { Actions } from 'react-native-router-flux'
 
@@ -79,7 +80,10 @@ const styles = StyleSheet.create({
   },
   glad: {
     fontSize: 22,
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 5},
@@ -103,7 +107,10 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   txtButton: {
-    fontFamily: 'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     fontSize: 20,
     color: 'white',
   },
@@ -125,7 +132,10 @@ const styles = StyleSheet.create({
   },
   txtInput:{
     fontSize: 20,
-    fontFamily:'aristotelica',
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
     color: 'white',
     backgroundColor: '#743c3c',
     borderRadius: 8,
