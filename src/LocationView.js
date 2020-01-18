@@ -24,21 +24,19 @@ export default class LocationView extends Component<Props> {
 
   render() {
     return (
-      <SafeAreaView style={styles.safeContainer}>
         <ImageBackground source={require('./images/background.png')} style={styles.container}>
             <View style={styles.tittleContainer}>
               <Text style={styles.tittletxt}>Where do you want it?</Text>
             </View>
             <View style={styles.buttonContainer}>
-                <TouchableHighlight onPress={()=> console.warn("Locate me")} style={styles.button}>
+                <TouchableHighlight onPress={()=> Actions.locationmap()} style={styles.button}>
                   <Text style={styles.txtButton}>Locate me!</Text>
                 </TouchableHighlight>
-                <TouchableHighlight onPress={()=> alert("Enter Address")} style={styles.buttonSign}>
-                  <Text style={styles.txtButton}>Enter Address</Text>
+                <TouchableHighlight onPress={()=> alert("Enter Address")} style={styles.buttonEnter}>
+                  <Text style={styles.txtButtonEnter}>Enter Address</Text>
                 </TouchableHighlight>
             </View>
         </ImageBackground>
-      </SafeAreaView>
     );
   }
 }
@@ -46,8 +44,8 @@ export default class LocationView extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: null,
-    height: null,
+    width: '100%',
+    height: '100%',
     backgroundColor: 'gray',
     justifyContent: 'center',
     alignItems: 'center'
@@ -84,7 +82,7 @@ const styles = StyleSheet.create({
   button: {
     width: 320,
     height: 60,
-    backgroundColor: "#743c3c",
+    backgroundColor: "#c52323",
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -99,13 +97,21 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: 'white',
   },
-  buttonSign:{
+  txtButtonEnter: {
+    fontFamily: Platform.select({
+      ios: 'Aristotelica Text',
+      android:'aristotelica',
+    }),
+    fontSize: 25,
+    color: '#c52323',
+  },
+  buttonEnter:{
     width: 320,
     height: 60,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: "#c52323",
+    backgroundColor: "white",
   }
 
 });

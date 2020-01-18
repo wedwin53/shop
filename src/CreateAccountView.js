@@ -3,7 +3,6 @@ import {
     StyleSheet, 
     Text, 
     ImageBackground, 
-    SafeAreaView,
     View,
     TouchableHighlight,
     TextInput,
@@ -22,7 +21,6 @@ export default class SignView extends Component<Props> {
 
   render() {
     return (
-      <SafeAreaView style={styles.safeContainer}>
         <ImageBackground source={require('./images/background.png')} style={styles.container}>
             <View style={styles.tittleContainer}>
               <Text style={styles.glad}>Glad you're sticking with us!</Text>
@@ -31,7 +29,7 @@ export default class SignView extends Component<Props> {
             <TextInput
               style={styles.txtInput}
               placeholder="E-mail:"
-              placeholderTextColor="gray"
+              placeholderTextColor="#c52323"
               onChangeText={(email) => this.setState({email})}
               value={this.state.email}
               maxLength={30}
@@ -39,7 +37,7 @@ export default class SignView extends Component<Props> {
             <TextInput
               style={styles.txtInput}
               placeholder="Phone Number:"
-              placeholderTextColor="gray"
+              placeholderTextColor="#c52323"
               onChangeText={(phone) => this.setState({phone})}
               value={this.state.phone}
               maxLength={30}
@@ -47,7 +45,7 @@ export default class SignView extends Component<Props> {
             <TextInput
               style={styles.txtInput}
               placeholder="Password:"
-              placeholderTextColor="gray"
+              placeholderTextColor="#c52323"
               onChangeText={(password) => this.setState({password})}
               value={this.state.password}
               secureTextEntry={true}
@@ -60,7 +58,6 @@ export default class SignView extends Component<Props> {
                 </TouchableHighlight>
             </View>
         </ImageBackground>
-      </SafeAreaView>
     );
   }
 }
@@ -68,8 +65,8 @@ export default class SignView extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: null,
-    height: null,
+    width: '100%',
+    height: '100%',
     backgroundColor: 'gray',
     justifyContent: 'center',
     alignItems: 'center'
@@ -131,13 +128,13 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   txtInput:{
-    fontSize: 20,
+    fontSize: 19,
     fontFamily: Platform.select({
       ios: 'Aristotelica Text',
       android:'aristotelica',
     }),
-    color: 'white',
-    backgroundColor: '#743c3c',
+    color: '#c52323',
+    backgroundColor: 'white',
     borderRadius: 8,
     width: '85%',
     height: 50,
